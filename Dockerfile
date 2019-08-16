@@ -21,13 +21,13 @@ MAINTAINER Andrew Grosser <dioptre@gmail.com>
 #     volumes:
 #       - ../bps/.setup/schema/pg:/docker-entrypoint-initdb.d/ 
 ## Or do it here if you have to
-# ENV SCHEMA_DIRECTORY ./schema
-# WORKDIR /docker-entrypoint-initdb.d
-# ADD $SCHEMA_DIRECTORY /docker-entrypoint-initdb.d
 
 ENV POSTGRES_PASSWORD password
 ENV POSTGRES_USER postgres
 ENV POSTGRES_DB sfpl
+ENV LOCAL_SCHEMA_DIRECTORY ./schema
+WORKDIR /docker-entrypoint-initdb.d
+ADD $LOCAL_SCHEMA_DIRECTORY /docker-entrypoint-initdb.d
 
 EXPOSE 5432
 
