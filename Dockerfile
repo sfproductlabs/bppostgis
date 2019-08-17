@@ -42,10 +42,14 @@ RUN apt update \
            libgdal-dev build-essential wget postgresql-server-dev-11 libxml2-dev\
       && rm -rf /var/lib/apt/lists/*
 
-
-WORKDIR /postgis-2.5.4dev
+WORKDIR /
 RUN wget http://postgis.net/stuff/postgis-2.5.4dev.tar.gz
 RUN tar -xvzf postgis-2.5.4dev.tar.gz
+WORKDIR /postgis-2.5.4dev
 RUN ./configure
 RUN make
 RUN make install
+
+
+
+
