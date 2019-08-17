@@ -1,7 +1,5 @@
-# PostGis Docker File
-Put your schema in the schema directory and the docker will create/run it.
-```
-# Reset Docker Containers
-# docker-compose rm -f
-```
+# Postgis Docker File
 
+No BS just works. Uses the v11 docker image, compiles postgis from source.
+
+Use a docker-compose.yml to customize and do what you want.
