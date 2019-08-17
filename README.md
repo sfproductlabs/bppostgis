@@ -1,4 +1,4 @@
-# Postgis Docker File
+# Postgis in Docker
 
 No BS just works. Uses the v11 docker image, compiles postgis from source.
 
