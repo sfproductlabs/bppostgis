@@ -25,6 +25,14 @@ services:
       - ./bps/.setup/schema/pg:/docker-entrypoint-initdb.d/   
 ```
 
+## Running
+```
+sudo docker build -t postgis .
+sudo docker run -p 5432:5432 postgis
+```
+
+OR use ```docker-compose up``` with the file above.
+
 ## Collaborating
 Example bash commands:
 
